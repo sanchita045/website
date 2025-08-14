@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flavorscape - A Journey Through Taste</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Custom font for a more appealing look */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Keyframe animation for the image slider */
+    @keyframes slide {
+      0% { transform: translateX(0%); }
+      25% { transform: translateX(-100%); } /* Slide to second image */
+      50% { transform: translateX(-200%); } /* Slide to third image */
+      75% { transform: translateX(-300%); } /* Slide to fourth image */
+      100% { transform: translateX(0%); } /* Loop back to first image */
+    }
+
+    .slider-track {
+      animation: slide 20s linear infinite; /* 20 seconds for 4 images (5s per image) */
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <header class="bg-red-500 text-white p-6 text-center">
+   
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+            <a href="#" class="text-red-600 font-bold text-3xl tracking-wide">BlackSeed</a>
+          </div>
+
+        <!-- Menu Links -->
+        <div class="hidden md:flex space-x-6 font-bold">
+        <a href="index.html" class="text-gray-700 hover:text-red-600">Home</a>
+
+          <a href="Menu.html" class="text-gray-700 hover:text-red-600">Menu</a>
+          <a href="reserve.html" class="text-gray-700 hover:text-red-600">Reservation</a>
+          <a href="contact.html" class="text-gray-700 hover:text-red-600">Contact</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-gray-700 focus:outline-none text-2xl">☰</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 font-bold">
+                <a href="index.html" class="text-gray-700 hover:text-red-600">Home</a>
+
+      <a href="Menu.html" class="block py-2 text-gray-700 hover:text-red-600">Menu</a>
+      <a href="reserve.html" class="block py-2 text-gray-700 hover:text-red-600">Reservation</a>
+      <a href="contact.html" class="block py-2 text-gray-700 hover:text-red-600">Contact</a>
+    </div>
+  </nav>
+
+  </header>
+  
+  
+
+  <!-- Image Slider Section -->
+  <section class="overflow-hidden w-full max-w-5xl mx-auto mt-10 rounded-xl shadow-2xl border-4 border-white">
+    <div class="relative w-full h-80"> <!-- Increased height for better visual -->
+      <div class="flex w-[400%] h-full slider-track">
+        <!-- Images for the slider. Ensure 4 images for 400% width. -->
+        <img src="https://media.istockphoto.com/id/1442417585/photo/person-getting-a-piece-of-cheesy-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=k60TjxKIOIxJpd4F4yLMVjsniB4W1BpEV4Mi_nb4uJU=" class="w-full object-cover p-2 rounded-xl" alt="Close-up of a delicious pepperoni pizza slice">
+        <img src="https://media.istockphoto.com/id/1370520449/photo/slice-of-chocolate-cake-with-glaze.jpg?s=612x612&w=0&k=20&c=KK-h7w4l0FNA0YMWvkr1X8UrAAB77z0f5tTByBYgReM=" class="w-full object-cover p-2 rounded-xl" alt="Decadent slice of chocolate cake with glaze">
+        <img src="https://media.istockphoto.com/id/1303583671/photo/cup-glass-of-coffee-with-smoke-and-coffee-beans-on-old-wooden-background.jpg?s=612x612&w=0&k=20&c=fAh3m6Hqxz-qeA45Tj2jGARhRiGFhgm80dLVthnvlD8=" class="w-full object-cover p-2 rounded-xl" alt="Warm cup of coffee with steam and coffee beans">
+        <img src="https://media.istockphoto.com/id/1254672762/photo/delicious-homemade-hamburger-and-french-fries.jpg?s=612x612&w=0&k=20&c=9BgdcWXRMb8hPZd2049StXFqvhDRq3izLkXK7Cq2C9s=" class="w-full object-cover p-2 rounded-xl" alt="Gourmet hamburger with crispy french fries">
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- Main Menu Section -->
+  <section id="menu" class="p-8 bg-white rounded-xl shadow-2xl max-w-6xl mx-auto mt-12 mb-12">
+    <h2 class="text-4xl font-bold text-center text-red-600 mb-10">Our Delicious Menu</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+      <!-- Menu Item: Burger -->
+      <div class="bg-gray-100 p-5 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://i.pinimg.com/736x/8b/36/9f/8b369fefca44952ef36cc09f830c00e7.jpg" alt="Burger" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Burger</h3>
+        <p class="text-gray-600 text-sm mb-3">Classic juicy burger with fresh toppings and a side of crispy fries.</p>
+        <div class="flex items-center justify-between mt-4">
+          <span class="text-red-600 font-bold text-xl">₹70</span>
+          <input type="number" min="1" value="1" class="w-20 p-2 border border-gray-300 rounded-md text-center text-gray-700" aria-label="Quantity for Burger">
+        </div>
+        <button class="mt-4 w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-300 ease-in-out font-semibold order-btn">Order</button>
+      </div>
+
+      <!-- Menu Item: Pizza -->
+      <div class="bg-gray-100 p-5 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://i.pinimg.com/736x/3e/c9/fe/3ec9fe32c6217014789b5f42e2343f47.jpg" alt="Pizza" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Pizza</h3>
+        <p class="text-gray-600 text-sm mb-3">Hand-tossed pizza with rich tomato sauce, mozzarella, and your choice of toppings.</p>
+        <div class="flex items-center justify-between mt-4">
+          <span class="text-red-600 font-bold text-xl">₹180</span>
+          <input type="number" min="1" value="1" class="w-20 p-2 border border-gray-300 rounded-md text-center text-gray-700" aria-label="Quantity for Pizza">
+        </div>
+        <button class="mt-4 w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-300 ease-in-out font-semibold order-btn">Order</button>
+      </div>
+
+      <!-- Menu Item: Fries -->
+      <div class="bg-gray-100 p-5 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://i.pinimg.com/736x/92/f5/10/92f510339bd2850379e78743089abe80.jpg" alt="Fries" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Fries</h3>
+        <p class="text-gray-600 text-sm mb-3">Perfectly golden and crispy French fries, seasoned to perfection.</p>
+        <div class="flex items-center justify-between mt-4">
+          <span class="text-red-600 font-bold text-xl">₹50</span>
+          <input type="number" min="1" value="1" class="w-20 p-2 border border-gray-300 rounded-md text-center text-gray-700" aria-label="Quantity for Fries">
+        </div>
+        <button class="mt-4 w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-300 ease-in-out font-semibold order-btn">Order</button>
+      </div>
+
+      <!-- Menu Item: Coffee -->
+      <div class="bg-gray-100 p-5 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://i.pinimg.com/1200x/92/18/fc/9218fcea495f1d4814cbb8af6f99a175.jpg" alt="Coffee" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Coffee</h3>
+        <p class="text-gray-600 text-sm mb-3">A comforting selection of hot and cold coffee beverages.</p>
+        <ul class="list-disc list-inside text-gray-600 text-sm mt-3">
+          <li>Hot Coffee - ₹30</li>
+          <li>Cold Coffee - ₹40</li>
+          <li>Cappuccino - ₹60</li>
+          <li>Americano - ₹80</li>
+          <li>Espresso - ₹65</li>
+        </ul>
+        <div class="flex items-center justify-between mt-4">
+          <span class="text-red-600 font-bold text-xl">Starting ₹30</span>
+          <input type="number" min="1" value="1" class="w-20 p-2 border border-gray-300 rounded-md text-center text-gray-700" aria-label="Quantity for Coffee">
+        </div>
+        <button class="mt-4 w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-300 ease-in-out font-semibold order-btn">Order</button>
+      </div>
+
+      <!-- Menu Item: Cold Drinks -->
+      <div class="bg-gray-100 p-5 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://i.pinimg.com/1200x/ca/9d/92/ca9d92b12ed6e30cd7563ccfaa845bf7.jpg" alt="Cold Drinks" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Cold Drinks</h3>
+        <p class="text-gray-600 text-sm mb-3">Quench your thirst with our refreshing cold beverages.</p>
+        <ul class="list-disc list-inside text-gray-600 text-sm mt-3">
+          <li>Lemon Juice - ₹30</li>
+          <li>Apple Juice - ₹40</li>
+          <li>Mojito - ₹80</li>
+        </ul>
+        <div class="flex items-center justify-between mt-4">
+          <span class="text-red-600 font-bold text-xl">Starting ₹30</span>
+          <input type="number" min="1" value="1" class="w-20 p-2 border border-gray-300 rounded-md text-center text-gray-700" aria-label="Quantity for Cold Drinks">
+        </div>
+        <button class="mt-4 w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-300 ease-in-out font-semibold order-btn">Order</button>
+      </div>
+
+      <!-- Menu Item: Samosa -->
+      <div class="bg-gray-100 p-5 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://i.pinimg.com/1200x/4a/19/9b/4a199bd8d261c129d0b222b417aeb2a2.jpg" alt="Samosa" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Samosa</h3>
+        <p class="text-gray-600 text-sm mb-3">Crispy, savory pastry filled with spiced potatoes and peas.</p>
+        <div class="flex items-center justify-between mt-4">
+          <span class="text-red-600 font-bold text-xl">₹20</span>
+          <input type="number" min="1" value="1" class="w-20 p-2 border border-gray-300 rounded-md text-center text-gray-700" aria-label="Quantity for Samosa">
+        </div>
+        <button class="mt-4 w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-300 ease-in-out font-semibold order-btn">Order</button>
+      </div>
+
+      <!-- Menu Item: Nachos -->
+      <div class="bg-gray-100 p-5 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://i.pinimg.com/736x/73/5d/5b/735d5b0afdafde03fcfff8660a008ce0.jpg" alt="Nachos" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Nachos</h3>
+        <p class="text-gray-600 text-sm mb-3">Loaded nachos with melted cheese, jalapeños, and fresh salsa.</p>
+        <div class="flex items-center justify-between mt-4">
+          <span class="text-red-600 font-bold text-xl">₹60</span>
+          <input type="number" min="1" value="1" class="w-20 p-2 border border-gray-300 rounded-md text-center text-gray-700" aria-label="Quantity for Nachos">
+        </div>
+        <button class="mt-4 w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-300 ease-in-out font-semibold order-btn">Order</button>
+      </div>
+
+      <!-- Menu Item: Vada Pav -->
+      <div class="bg-gray-100 p-5 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://i.pinimg.com/736x/1d/5c/59/1d5c591685b69facd54fea3380d63d0b.jpg" alt="Vada Pav" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Vada Pav</h3>
+        <p class="text-gray-600 text-sm mb-3">The iconic Indian street food: a spicy potato fritter in a soft bun.</p>
+        <div class="flex items-center justify-between mt-4">
+          <span class="text-red-600 font-bold text-xl">₹20</span>
+          <input type="number" min="1" value="1" class="w-20 p-2 border border-gray-300 rounded-md text-center text-gray-700" aria-label="Quantity for Vada Pav">
+        </div>
+        <button class="mt-4 w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-300 ease-in-out font-semibold order-btn">Order</button>
+      </div>
+
+      <!-- Menu Item: Ice Cream -->
+      <div class="bg-gray-100 p-5 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://i.pinimg.com/1200x/ea/f2/4d/eaf24d7ff0ce22aec9108e88ca874f2c.jpg" alt="Ice Cream" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Ice Cream</h3>
+        <p class="text-gray-600 text-sm mb-3">Indulge in our creamy and delightful ice cream flavors.</p>
+        <ul class="list-disc list-inside text-gray-600 text-sm mt-3">
+          <li>Vanilla - ₹80</li>
+          <li>Chocolate - ₹90</li>
+          <li>Strawberry - ₹90</li>
+          <li>Mango - ₹100</li>
+        </ul>
+        <div class="flex items-center justify-between mt-4">
+          <span class="text-red-600 font-bold text-xl">Starting ₹80</span>
+          <input type="number" min="1" value="1" class="w-20 p-2 border border-gray-300 rounded-md text-center text-gray-700" aria-label="Quantity for Ice Cream">
+        </div>
+        <button class="mt-4 w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-300 ease-in-out font-semibold order-btn">Order</button>
+      </div>
+
+      <!-- Menu Item: Chicken 65 -->
+      <div class="bg-gray-100 p-5 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://i.pinimg.com/1200x/af/fe/46/affe467a345212c1305ab43388768cfc.jpg" alt="Spicy Chicken 65" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Peastry</h3>
+        <p class="text-gray-600 text-sm mb-3">Cremy ,Soft Peastry.</p>
+        <div class="flex items-center justify-between mt-4">
+        
+          <span class="text-red-600 font-bold text-xl">₹60</span>
+
+          <input type="number" min="1" value="1" class="w-20 p-2 border border-gray-300 rounded-md text-center text-gray-700" aria-label="Quantity for Chicken 65">
+        </div>
+        <ul class="list-disc list-inside text-gray-600 text-sm mt-3">
+          <li>Vanilla - ₹40</li>
+          <li>Chocolate - ₹600</li>
+          <li>Strawberry - ₹60</li>
+          <li>Rainbow - ₹100</li>
+        </ul>
+        <button class="mt-4 w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-300 ease-in-out font-semibold order-btn">Order</button>
+      </div>
+
+      <!-- Menu Item: Tea -->
+      <div class="bg-gray-100 p-5 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://i.pinimg.com/736x/14/5f/34/145f34bf03e812875f270b59c09c26f5.jpg" alt="Aromatic Tea" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Tea</h3>
+        <p class="text-gray-600 text-sm mb-3">Warm up with our selection of aromatic teas.</p>
+        <div class="flex items-center justify-between mt-4">
+          <span class="text-red-600 font-bold text-xl">₹10</span>
+          <input type="number" min="1" value="1" class="w-20 p-2 border border-gray-300 rounded-md text-center text-gray-700" aria-label="Quantity for Tea">
+        </div>
+        <button class="mt-4 w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-300 ease-in-out font-semibold order-btn">Order</button>
+      </div>
+
+      <!-- Menu Item: Veg Biryani -->
+      <div class="bg-gray-100 p-5 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://i.pinimg.com/736x/a0/92/4d/a0924da750c9ef458be70bfaec61fa11.jpg" alt="Vegetable Biryani" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Veg Biryani</h3>
+        <p class="text-gray-600 text-sm mb-3">Fragrant basmati rice cooked with mixed vegetables and aromatic spices.</p>
+        <div class="flex items-center justify-between mt-4">
+          <span class="text-red-600 font-bold text-xl">₹250</span>
+          <input type="number" min="1" value="1" class="w-20 p-2 border border-gray-300 rounded-md text-center text-gray-700" aria-label="Quantity for Veg Biryani">
+        </div>
+        <button class="mt-4 w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-300 ease-in-out font-semibold order-btn">Order</button>
+      </div>
+
+      <!-- Menu Item: Butter Chicken -->
+      <div class="bg-gray-100 p-5 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://i.pinimg.com/1200x/2b/9c/bf/2b9cbf03867d8be63cfb1999315d022d.jpg" alt="Butter Chicken" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Butter Chicken</h3>
+        <p class="text-gray-600 text-sm mb-3">Tender chicken pieces in a rich, creamy tomato-based gravy.</p>
+        <div class="flex items-center justify-between mt-4">
+          <span class="text-red-600 font-bold text-xl">₹320</span>
+          <input type="number" min="1" value="1" class="w-20 p-2 border border-gray-300 rounded-md text-center text-gray-700" aria-label="Quantity for Butter Chicken">
+        </div>
+        <button class="mt-4 w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-300 ease-in-out font-semibold order-btn">Order</button>
+      </div>
+
+      <!-- Menu Item: Paneer Tikka -->
+      <div class="bg-gray-100 p-5 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://i.pinimg.com/736x/30/09/a0/3009a0997e9e2c64505a72725a359b54.jpg" alt="Paneer Tikka" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Paneer Tikka</h3>
+        <p class="text-gray-600 text-sm mb-3">Grilled cottage cheese cubes marinated in flavorful spices.</p>
+        <div class="flex items-center justify-between mt-4">
+          <span class="text-red-600 font-bold text-xl">₹280</span>
+          <input type="number" min="1" value="1" class="w-20 p-2 border border-gray-300 rounded-md text-center text-gray-700" aria-label="Quantity for Paneer Tikka">
+        </div>
+        <button class="mt-4 w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-300 ease-in-out font-semibold order-btn">Order</button>
+      </div>
+
+      <!-- Menu Item: Patties -->
+      <div class="bg-gray-100 p-5 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://i.pinimg.com/1200x/8f/6a/a1/8f6aa129b8845dabd138afd32fd80ef5.jpg" alt="Delicious Patties" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Patties</h3>
+        <p class="text-gray-600 text-sm mb-3">Flaky, golden pastries with various savory fillings.</p>
+        <div class="flex items-center justify-between mt-4">
+          <span class="text-red-600 font-bold text-xl">₹50</span>
+          <input type="number" min="1" value="1" class="w-20 p-2 border border-gray-300 rounded-md text-center text-gray-700" aria-label="Quantity for Patties">
+        </div>
+        <button class="mt-4 w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-300 ease-in-out font-semibold order-btn">Order</button>
+      </div>
+
+      <!-- Menu Item: Nuggets -->
+      <div class="bg-gray-100 p-5 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://i.pinimg.com/1200x/50/5f/fb/505ffb21f6cd4126a333277e89d027b4.jpg" alt="Crispy Chicken Nuggets" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Nuggets</h3>
+        <p class="text-gray-600 text-sm mb-3">Crispy and tender chicken nuggets, perfect for a quick bite.</p>
+        <div class="flex items-center justify-between mt-4">
+          <span class="text-red-600 font-bold text-xl">₹70</span>
+          <input type="number" min="1" value="1" class="w-20 p-2 border border-gray-300 rounded-md text-center text-gray-700" aria-label="Quantity for Nuggets">
+        </div>
+        <button class="mt-4 w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-300 ease-in-out font-semibold order-btn">Order</button>
+      </div>
+
+      <!-- Menu Item: Fried Chicken -->
+      <div class="bg-gray-100 p-5 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://i.pinimg.com/1200x/76/2f/46/762f46447081fb6863c8843933960139.jpg" alt="Golden Fried Chicken" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Fried Chicken</h3>
+        <p class="text-gray-600 text-sm mb-3">Our signature crispy fried chicken, seasoned to perfection.</p>
+        <div class="flex items-center justify-between mt-4">
+          <span class="text-red-600 font-bold text-xl">₹80</span>
+          <input type="number" min="1" value="1" class="w-20 p-2 border border-gray-300 rounded-md text-center text-gray-700" aria-label="Quantity for Fried Chicken">
+        </div>
+        <button class="mt-4 w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-300 ease-in-out font-semibold order-btn">Order</button>
+      </div>
+
+      <!-- Menu Item: Momo -->
+      <div class="bg-gray-100 p-5 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="https://i.pinimg.com/736x/65/95/77/659577601db80b1eaf9dc497f30e02df.jpg" alt="Delicious Momo dumplings" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Momo</h3>
+        <p class="text-gray-600 text-sm mb-3">Delicious steamed or fried dumplings with savory fillings.</p>
+        <div class="flex items-center justify-between mt-4">
+          <span class="text-red-600 font-bold text-xl">₹70</span>
+          <input type="number" min="1" value="1" class="w-20 p-2 border border-gray-300 rounded-md text-center text-gray-700" aria-label="Quantity for Momo">
+        </div>
+        <button class="mt-4 w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-300 ease-in-out font-semibold order-btn">Order</button>
+      </div>
+
+    </div>
+  </section>
+
+  <form action="order.php" method="POST" class="p-6 mx-auto p-6 bg-white rounded-lg shadow-md space-y-4">
+  <h2 class="text-2xl font-bold text-center text-red-600">Place Your Order</h2>
+
+  <div>
+    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+    <input type="text" name="name" id="name" required class="mt-1 w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-red-500">
+  </div>
+
+  <div>
+    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+    <input type="email" name="email" id="email" required class="mt-1 w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-red-500">
+  </div>
+
+  <div>
+    <label for="item" class="block text-sm font-medium text-gray-700">Order Item</label>
+    <input type="text" name="item" id="item" required class="mt-1 w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-red-500">
+  </div>
+
+  <div>
+    <label for="quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+    <input type="number" name="quantity" id="quantity" required class="mt-1 w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-red-500">
+  </div>
+
+  <div class="text-center">
+    <button type="submit" class="px-6 py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700 transition">Submit Order</button>
+  </div>
+</form>
+
+
+  <script>
+    // JavaScript for mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Basic "Order" functionality (logs to console)
+    document.querySelectorAll('.order-btn').forEach(button => {
+      button.addEventListener('click', function() {
+        const menuItem = this.closest('.bg-gray-100');
+        const itemName = menuItem.querySelector('h3').innerText;
+        const itemPrice = menuItem.querySelector('.text-red-600').innerText;
+        const quantity = menuItem.querySelector('input[type="number"]').value;
+
+        console.log(`Ordered: ${quantity} x ${itemName} (${itemPrice})`);
+        // In a real application, you would send this order to a server or manage a cart.
+        alert(` place Your order for ${quantity} x ${itemName} Bellow Again ! `);
+      });
+    });
+  </script>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center p-4 mt-6">
+    &copy; 2025 BlackSeed. All rights reserved.
+  </footer>
+</body>
+</html>

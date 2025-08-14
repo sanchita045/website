@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flavorscape</title>
+  <script src="script.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+   <!-- Header -->
+  <header class="bg-red-500 text-white p-6 text-center">
+   
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+            <a href="#" class="text-red-600 font-bold text-3xl tracking-wide">BlackSeed</a>
+          </div>
+
+        <!-- Menu Links -->
+        <div class="hidden md:flex space-x-6 font-bold">
+        <a href="index.html" class="text-gray-700 hover:text-red-600">Home</a>
+
+          <a href="Menu.html" class="text-gray-700 hover:text-red-600">Menu</a>
+          <a href="reserve.html" class="text-gray-700 hover:text-red-600">Reservation</a>
+          <a href="contact.html" class="text-gray-700 hover:text-red-600">Contact</a>
+        </div>
+          
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-gray-700 focus:outline-none text-2xl">☰</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+   <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 font-bold space-y-2 bg-white rounded-md">
+  <a href="index.html" class="block py-2 text-gray-700 hover:text-red-600">Home</a>
+  <a href="Menu.html" class="block py-2 text-gray-700 hover:text-red-600">Menu</a>
+  <a href="reserve.html" class="block py-2 text-gray-700 hover:text-red-600">Reservation</a>
+  <a href="contact.html" class="block py-2 text-gray-700 hover:text-red-600">Contact</a>
+</div>
+
+  </nav>
+
+  </header>
+ 
+<video class="w-[900px] h-[280px] mx-auto block p-8" autoplay muted controls loop>
+  <source src="final.mp4" type="video/mp4">
+invalid</video>
+
+  
+  <!-- Image Cards Section -->
+<div class="flex flex-wrap justify-center gap-6 ">
+
+  <!-- Card 1 -->
+  <figure class="relative max-w-sm transition-all duration-300 cursor-pointer">
+    <a href="index.html">
+      <img class="w-full h-auto rounded-lg" src=" https://i.pinimg.com/736x/f9/29/99/f92999858602bbccf2b25312c0af45e5.jpg">
+    </a>
+    <figcaption class="absolute px-4 text-lg text-white bottom-6">
+      <h1 class="font-bold">BlackSeed</h1>
+      <a href="Menu.html">
+        <button class="mt-4 w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-300 ease-in-out font-semibold">Menu</button>
+      </a>
+    </figcaption>
+  </figure>
+
+  <!-- Card 2 -->
+  <figure class="relative max-w-sm transition-all duration-300 cursor-pointer">
+    <a href="index.html">
+      <img class="w-full h-auto rounded-lg" src="https://i.pinimg.com/1200x/99/ec/7f/99ec7ff2396d8c5ddc82d0cdf27c2e57.jpg" alt="Friends enjoying coffee">
+    </a>
+    <figcaption class="absolute px-4 text-lg text-white bottom-6">
+      <h1 class="font-bold">BlackSeed</h1>
+      <a href="reserve.html">
+        <button class="mt-4 w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-300 ease-in-out font-semibold">Reservation</button>
+      </a>
+    </figcaption>
+  </figure>
+
+  <!-- Card 3 -->
+  <figure class="relative max-w-sm transition-all duration-300 cursor-pointer">
+    <a href="index.html">
+      <img class="w-full h-auto rounded-lg" src="https://i.pinimg.com/736x/80/5a/b4/805ab4b4aa4df7044aad50e6772ff6a2.jpg" alt="Friends enjoying coffee">
+    </a>
+    <figcaption class="absolute px-4 text-lg text-white bottom-6">
+      <h1 class="font-bold">BlackSeed</h1>
+      <a href="contact.html">
+        <button class="mt-4 w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition duration-300 ease-in-out font-semibold">contact US</button>
+      </a>
+    </figcaption>
+  </figure>
+
+</div>
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center p-4 mt-6">
+    &copy; 2025 BlackSeed. All rights reserved.
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuToggle.addEventListener("click", function () {
+    mobileMenu.classList.toggle("hidden");
+  });
+});
+
+  </script>
+
+</body>
+</html>
